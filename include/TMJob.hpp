@@ -10,9 +10,9 @@ enum class TASK_TYPE
 
 struct TaskType {
 public:
-    TaskType(concurrent_queue<std::shared_ptr<TaskType>>* queue, enum class TASK_TYPE task_type = TASK_TYPE::EXECUTE);
+    TaskType(concurrent_queue<std::shared_ptr<TaskType>>* queue, enum TASK_TYPE task_type = TASK_TYPE::EXECUTE);
 protected:
-    enum class TASK_TYPE type;
+    enum TASK_TYPE type;
 public:
     int32_t execute();
     unsigned long virtual one_thread_method(void*) = 0;

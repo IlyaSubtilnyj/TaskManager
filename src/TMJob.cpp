@@ -1,6 +1,6 @@
 #include "TMJob.hpp"
 
-TaskType::TaskType(concurrent_queue<std::shared_ptr<TaskType>>* queue, enum class TASK_TYPE task_type) 
+TaskType::TaskType(concurrent_queue<std::shared_ptr<TaskType>>* queue, enum TASK_TYPE task_type) 
     : complited_tasks_queue(queue), type(task_type)
 {}
 
